@@ -8,10 +8,16 @@
   <body>
     <div class="header">
       <div class="logo">⚡ POKÉSHOP</div>
-      <div class="burger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="header-right">
+        <div class="cart" onclick="toggleCart()">
+          <div class="cart-icon">🛒</div>
+          <div class="cart-count" id="cartCount">0</div>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
 
@@ -40,79 +46,107 @@
       <div class="cards-grid">
         <div class="card">
           <div class="card-image">
-            <img src="/img/darcaufeu.png" />
+            <img
+              src="https://images.unsplash.com/photo-1606503153255-59d7a2d1e6c0?w=400&h=560&fit=crop"
+            />
             <div class="card-badge">Rare</div>
           </div>
           <div class="card-content">
             <div class="card-name">Dracaufeu Holographique</div>
             <div class="card-details">Édition de base • 1ère édition</div>
             <div class="card-price">450€</div>
-            <div class="btn-card">Ajouter au panier</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="/img/pika.png" />
-            <div class="card-badge">Populaire</div>
-          </div>
-          <div class="card-content">
-            <div class="card-name">Pikachu Illustrator</div>
-            <div class="card-details">Promo exclusive • Mint</div>
-            <div class="card-price">250€</div>
-            <div class="btn-card">Ajouter au panier</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-image">
-            <img src="img/newtoo.png" />
-            <div class="card-badge">Rare</div>
-          </div>
-          <div class="card-content">
-            <div class="card-name">Mewtwo GX Rainbow</div>
-            <div class="card-details">Soleil & Lune • PSA 10</div>
-            <div class="card-price">380€</div>
-            <div class="btn-card">Ajouter au panier</div>
+            <div
+              class="btn-card"
+              onclick="addToCart('Dracaufeu Holographique', 450)"
+            >
+              Ajouter au panier
+            </div>
           </div>
         </div>
 
         <div class="card">
           <div class="card-image">
             <img
-              src="/img/Tortank-holo-2-102-Set-de-Base-Fuji-Store-scaled.png"
+              src="https://images.unsplash.com/photo-1613771404721-1f92d799e49f?w=400&h=560&fit=crop"
+            />
+            <div class="card-badge">Populaire</div>
+          </div>
+          <div class="card-content">
+            <div class="card-name">Pikachu Illustrator</div>
+            <div class="card-details">Promo exclusive • Mint</div>
+            <div class="card-price">250€</div>
+            <div
+              class="btn-card"
+              onclick="addToCart('Pikachu Illustrator', 250)"
+            >
+              Ajouter au panier
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?w=400&h=560&fit=crop"
+            />
+            <div class="card-badge">Rare</div>
+          </div>
+          <div class="card-content">
+            <div class="card-name">Mewtwo GX Rainbow</div>
+            <div class="card-details">Soleil & Lune • PSA 10</div>
+            <div class="card-price">380€</div>
+            <div class="btn-card" onclick="addToCart('Mewtwo GX Rainbow', 380)">
+              Ajouter au panier
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=560&fit=crop"
             />
           </div>
           <div class="card-content">
             <div class="card-name">Tortank Holo</div>
             <div class="card-details">Set de base • Near Mint</div>
             <div class="card-price">320€</div>
-            <div class="btn-card">Ajouter au panier</div>
+            <div class="btn-card" onclick="addToCart('Tortank Holo', 320)">
+              Ajouter au panier
+            </div>
           </div>
         </div>
 
         <div class="card">
           <div class="card-image">
-            <img src="/img/shopping.png" />
+            <img
+              src="https://images.unsplash.com/photo-1542779283-429940ce8336?w=400&h=560&fit=crop"
+            />
           </div>
           <div class="card-content">
             <div class="card-name">Florizarre Shiny</div>
             <div class="card-details">Destinées Occultes • Holo</div>
             <div class="card-price">290€</div>
-            <div class="btn-card">Ajouter au panier</div>
+            <div class="btn-card" onclick="addToCart('Florizarre Shiny', 290)">
+              Ajouter au panier
+            </div>
           </div>
         </div>
 
         <div class="card">
           <div class="card-image">
-            <img src="/img/51XaCg-PdL.png" />
+            <img
+              src="https://images.unsplash.com/photo-1606503153255-59d7a2d1e6c0?w=400&h=560&fit=crop"
+            />
             <div class="card-badge">Rare</div>
           </div>
           <div class="card-content">
             <div class="card-name">Rayquaza VMAX</div>
             <div class="card-details">Évolutions Célestes • Secret</div>
             <div class="card-price">520€</div>
-            <div class="btn-card">Ajouter au panier</div>
+            <div class="btn-card" onclick="addToCart('Rayquaza VMAX', 520)">
+              Ajouter au panier
+            </div>
           </div>
         </div>
       </div>
@@ -182,6 +216,8 @@
     </div>
 
     <script>
+      let cartItems = 0;
+
       function toggleMenu() {
         const menu = document.getElementById("menu");
         menu.classList.toggle("active");
@@ -190,6 +226,26 @@
       function scrollTo(id) {
         document.getElementById(id).scrollIntoView({ behavior: "smooth" });
         document.getElementById("menu").classList.remove("active");
+      }
+
+      function addToCart(itemName, price) {
+        cartItems++;
+        document.getElementById("cartCount").textContent = cartItems;
+
+        // Animation du compteur
+        const cartCount = document.getElementById("cartCount");
+        cartCount.style.transform = "scale(1.5)";
+        setTimeout(() => {
+          cartCount.style.transform = "scale(1)";
+        }, 200);
+      }
+
+      function toggleCart() {
+        if (cartItems === 0) {
+          alert("Votre panier est vide");
+        } else {
+          alert("Vous avez " + cartItems + " article(s) dans votre panier");
+        }
       }
     </script>
   </body>
