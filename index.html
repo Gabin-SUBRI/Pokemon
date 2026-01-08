@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>PokeShop</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">⚡ POKÉSHOP</div>
+      <div class="burger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="menu" id="menu">
+      <div onclick="scrollTo('hero')">Accueil</div>
+      <div onclick="scrollTo('catalog')">Catalogue</div>
+      <div onclick="scrollTo('about')">À propos</div>
+      <div onclick="scrollTo('contact')">Contact</div>
+    </div>
+
+    <div class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-title">Découvrez les Cartes Légendaires</div>
+        <div class="hero-subtitle">
+          Collection exclusive de cartes Pokémon rares et authentifiées
+        </div>
+        <div class="btn-primary" onclick="scrollTo('catalog')">
+          Explorer le catalogue
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog" id="catalog">
+      <div class="section-title">Notre Sélection Premium</div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-image">
+            <img src="/img/darcaufeu.png" />
+            <div class="card-badge">Rare</div>
+          </div>
+          <div class="card-content">
+            <div class="card-name">Dracaufeu Holographique</div>
+            <div class="card-details">Édition de base • 1ère édition</div>
+            <div class="card-price">450€</div>
+            <div class="btn-card">Ajouter au panier</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="/img/pika.png" />
+            <div class="card-badge">Populaire</div>
+          </div>
+          <div class="card-content">
+            <div class="card-name">Pikachu Illustrator</div>
+            <div class="card-details">Promo exclusive • Mint</div>
+            <div class="card-price">250€</div>
+            <div class="btn-card">Ajouter au panier</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="img/newtoo.png" />
+            <div class="card-badge">Rare</div>
+          </div>
+          <div class="card-content">
+            <div class="card-name">Mewtwo GX Rainbow</div>
+            <div class="card-details">Soleil & Lune • PSA 10</div>
+            <div class="card-price">380€</div>
+            <div class="btn-card">Ajouter au panier</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img
+              src="/img/Tortank-holo-2-102-Set-de-Base-Fuji-Store-scaled.png"
+            />
+          </div>
+          <div class="card-content">
+            <div class="card-name">Tortank Holo</div>
+            <div class="card-details">Set de base • Near Mint</div>
+            <div class="card-price">320€</div>
+            <div class="btn-card">Ajouter au panier</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="/img/shopping.png" />
+          </div>
+          <div class="card-content">
+            <div class="card-name">Florizarre Shiny</div>
+            <div class="card-details">Destinées Occultes • Holo</div>
+            <div class="card-price">290€</div>
+            <div class="btn-card">Ajouter au panier</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="/img/51XaCg-PdL.png" />
+            <div class="card-badge">Rare</div>
+          </div>
+          <div class="card-content">
+            <div class="card-name">Rayquaza VMAX</div>
+            <div class="card-details">Évolutions Célestes • Secret</div>
+            <div class="card-price">520€</div>
+            <div class="btn-card">Ajouter au panier</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <div class="about-container">
+        <div class="section-title">Notre Histoire</div>
+        <div class="about-content">
+          <div class="about-text">
+            Depuis 2010, PokéShop s'est imposé comme la référence européenne
+            dans la vente de cartes Pokémon authentiques et certifiées. Notre
+            équipe passionnée sélectionne méticuleusement chaque carte pour
+            garantir leur authenticité et leur état de conservation
+            exceptionnel.
+          </div>
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">✓</div>
+              <div class="feature-text">Certification PSA garantie</div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">✓</div>
+              <div class="feature-text">Livraison sécurisée</div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">✓</div>
+              <div class="feature-text">Retour sous 30 jours</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact" id="contact">
+      <div class="contact-container">
+        <div class="section-title">Contactez-nous</div>
+        <div class="form">
+          <input type="text" placeholder="Votre nom" />
+          <input type="text" placeholder="Votre email" />
+          <textarea placeholder="Votre message"></textarea>
+          <div class="btn-primary">Envoyer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-title">PokéShop</div>
+          <div>Votre spécialiste des cartes rares</div>
+        </div>
+        <div class="footer-section">
+          <div class="footer-title">Liens rapides</div>
+          <div onclick="scrollTo('catalog')">Catalogue</div>
+          <div onclick="scrollTo('about')">À propos</div>
+          <div onclick="scrollTo('contact')">Contact</div>
+        </div>
+        <div class="footer-section">
+          <div class="footer-title">Suivez-nous</div>
+          <div>Instagram</div>
+          <div>Facebook</div>
+          <div>Twitter</div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2024 PokéShop - Tous droits réservés</div>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+      }
+
+      function scrollTo(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        document.getElementById("menu").classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
