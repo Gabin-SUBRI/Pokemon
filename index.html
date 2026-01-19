@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -11,27 +11,48 @@
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
     <!-- Contrôles d'accessibilité -->
-    <aside class="accessibility-controls" aria-label="Contrôles d'accessibilité">
-      <button onclick="changeTextSize('normal')" aria-label="Taille de texte normale" tabindex="0">A</button>
-      <button onclick="changeTextSize('large')" aria-label="Grande taille de texte" tabindex="0">A+</button>
-      <button onclick="changeTextSize('xlarge')" aria-label="Très grande taille de texte" tabindex="0">A++</button>
+    <aside
+      class="accessibility-controls"
+      aria-label="Contrôles d'accessibilité"
+    >
+      <button
+        onclick="changeTextSize('normal')"
+        aria-label="Taille de texte normale"
+        tabindex="0"
+      >
+        A
+      </button>
+      <button
+        onclick="changeTextSize('large')"
+        aria-label="Grande taille de texte"
+        tabindex="0"
+      >
+        A+
+      </button>
+      <button
+        onclick="changeTextSize('xlarge')"
+        aria-label="Très grande taille de texte"
+        tabindex="0"
+      >
+        A++
+      </button>
     </aside>
 
     <header class="header">
       <div class="logo" role="banner">⚡ POKÉSHOP</div>
       <div class="header-right">
-        <button 
-          class="cart" 
-          onclick="toggleCart()" 
+        <button
+          class="cart"
+          onclick="toggleCart()"
           aria-label="Panier d'achat"
           tabindex="0"
         >
           <div class="cart-icon" aria-hidden="true">🛒</div>
           <div class="cart-count" id="cartCount" aria-live="polite">0</div>
         </button>
-        <button 
-          class="burger" 
-          onclick="toggleMenu()" 
+        <button
+          class="burger"
+          onclick="toggleMenu()"
           aria-label="Menu de navigation"
           aria-expanded="false"
           aria-controls="menu"
@@ -46,7 +67,9 @@
 
     <nav class="menu" id="menu" aria-label="Navigation principale">
       <a href="#hero" onclick="scrollTo('hero')" tabindex="0">Accueil</a>
-      <a href="#catalog" onclick="scrollTo('catalog')" tabindex="0">Catalogue</a>
+      <a href="#catalog" onclick="scrollTo('catalog')" tabindex="0"
+        >Catalogue</a
+      >
       <a href="#about" onclick="scrollTo('about')" tabindex="0">À propos</a>
       <a href="#contact" onclick="scrollTo('contact')" tabindex="0">Contact</a>
     </nav>
@@ -55,18 +78,27 @@
       <section class="hero" id="hero" aria-labelledby="hero-title">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <h1 class="hero-title" id="hero-title">Découvrez les Cartes Légendaires</h1>
+          <h1 class="hero-title" id="hero-title">
+            Découvrez les Cartes Légendaires
+          </h1>
           <p class="hero-subtitle">
             Collection exclusive de cartes Pokémon rares et authentifiées
           </p>
-          <a href="#catalog" class="btn-primary" onclick="scrollTo('catalog')" tabindex="0">
+          <a
+            href="#catalog"
+            class="btn-primary"
+            onclick="scrollTo('catalog')"
+            tabindex="0"
+          >
             Explorer le catalogue
           </a>
         </div>
       </section>
 
       <section class="catalog" id="catalog" aria-labelledby="catalog-title">
-        <h2 class="section-title" id="catalog-title">Notre Sélection Premium</h2>
+        <h2 class="section-title" id="catalog-title">
+          Notre Sélection Premium
+        </h2>
         <div class="cards-grid">
           <article class="card">
             <div class="card-image">
@@ -130,7 +162,10 @@
 
           <article class="card">
             <div class="card-image">
-              <img src="/img/Tortank-holo-2-102-Set-de-Base-Fuji-Store-scaled.png" alt="" />
+              <img
+                src="/img/Tortank-holo-2-102-Set-de-Base-Fuji-Store-scaled.png"
+                alt=""
+              />
             </div>
             <div class="card-content">
               <h3 class="card-name">Tortank Holo</h3>
@@ -223,44 +258,54 @@
           <form class="form" onsubmit="handleSubmit(event)">
             <div class="form-group">
               <label for="name">
-                Votre nom<span class="required" aria-label="Obligatoire">*</span>
+                Votre nom<span class="required" aria-label="Obligatoire"
+                  >*</span
+                >
               </label>
-              <input 
-                type="text" 
-                id="name" 
+              <input
+                type="text"
+                id="name"
                 name="name"
-                placeholder="Jean Dupont" 
+                placeholder="Jean Dupont"
                 required
                 aria-required="true"
                 aria-describedby="name-error"
                 tabindex="0"
               />
-              <span id="name-error" class="error-message">Veuillez entrer votre nom</span>
+              <span id="name-error" class="error-message"
+                >Veuillez entrer votre nom</span
+              >
             </div>
 
             <div class="form-group">
               <label for="email">
-                Votre email<span class="required" aria-label="Obligatoire">*</span>
+                Votre email<span class="required" aria-label="Obligatoire"
+                  >*</span
+                >
               </label>
-              <input 
-                type="email" 
-                id="email" 
+              <input
+                type="email"
+                id="email"
                 name="email"
-                placeholder="jean.dupont@exemple.fr" 
+                placeholder="jean.dupont@exemple.fr"
                 required
                 aria-required="true"
                 aria-describedby="email-error"
                 tabindex="0"
               />
-              <span id="email-error" class="error-message">Veuillez entrer une adresse email valide</span>
+              <span id="email-error" class="error-message"
+                >Veuillez entrer une adresse email valide</span
+              >
             </div>
 
             <div class="form-group">
               <label for="message">
-                Votre message<span class="required" aria-label="Obligatoire">*</span>
+                Votre message<span class="required" aria-label="Obligatoire"
+                  >*</span
+                >
               </label>
-              <textarea 
-                id="message" 
+              <textarea
+                id="message"
                 name="message"
                 placeholder="Écrivez votre message ici..."
                 required
@@ -268,10 +313,14 @@
                 aria-describedby="message-error"
                 tabindex="0"
               ></textarea>
-              <span id="message-error" class="error-message">Veuillez entrer votre message</span>
+              <span id="message-error" class="error-message"
+                >Veuillez entrer votre message</span
+              >
             </div>
 
-            <button type="submit" class="btn-primary" tabindex="0">Envoyer</button>
+            <button type="submit" class="btn-primary" tabindex="0">
+              Envoyer
+            </button>
           </form>
         </div>
       </section>
@@ -285,97 +334,30 @@
         </div>
         <div class="footer-section">
           <h3 class="footer-title">Liens rapides</h3>
-          <a href="#catalog" onclick="scrollTo('catalog')" tabindex="0">Catalogue</a>
+          <a href="#catalog" onclick="scrollTo('catalog')" tabindex="0"
+            >Catalogue</a
+          >
           <a href="#about" onclick="scrollTo('about')" tabindex="0">À propos</a>
-          <a href="#contact" onclick="scrollTo('contact')" tabindex="0">Contact</a>
+          <a href="#contact" onclick="scrollTo('contact')" tabindex="0"
+            >Contact</a
+          >
         </div>
         <div class="footer-section">
           <h3 class="footer-title">Suivez-nous</h3>
-          <a href="#" aria-label="Suivez-nous sur Instagram" tabindex="0">Instagram</a>
-          <a href="#" aria-label="Suivez-nous sur Facebook" tabindex="0">Facebook</a>
-          <a href="#" aria-label="Suivez-nous sur Twitter" tabindex="0">Twitter</a>
+          <a href="#" aria-label="Suivez-nous sur Instagram" tabindex="0"
+            >Instagram</a
+          >
+          <a href="#" aria-label="Suivez-nous sur Facebook" tabindex="0"
+            >Facebook</a
+          >
+          <a href="#" aria-label="Suivez-nous sur Twitter" tabindex="0"
+            >Twitter</a
+          >
         </div>
       </div>
       <div class="footer-bottom">© 2024 PokéShop - Tous droits réservés</div>
     </footer>
 
-    <script>
-      let cartItems = 0;
-
-      function changeTextSize(size) {
-        document.body.classList.remove('text-large', 'text-xlarge');
-        if (size === 'large') {
-          document.body.classList.add('text-large');
-        } else if (size === 'xlarge') {
-          document.body.classList.add('text-xlarge');
-        }
-      }
-
-      function toggleMenu() {
-        const menu = document.getElementById("menu");
-        const burger = document.querySelector(".burger");
-        const isActive = menu.classList.toggle("active");
-        burger.setAttribute("aria-expanded", isActive);
-      }
-
-      function scrollTo(id) {
-        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-        document.getElementById("menu").classList.remove("active");
-        document.querySelector(".burger").setAttribute("aria-expanded", "false");
-      }
-
-      function addToCart(itemName, price) {
-        cartItems++;
-        document.getElementById("cartCount").textContent = cartItems;
-
-        const cartCount = document.getElementById("cartCount");
-        cartCount.style.transform = "scale(1.5)";
-        setTimeout(() => {
-          cartCount.style.transform = "scale(1)";
-        }, 200);
-
-        const announcement = document.createElement('div');
-        announcement.setAttribute('role', 'status');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.className = 'sr-only';
-        announcement.textContent = itemName + ' ajouté au panier pour ' + price + ' euros';
-        document.body.appendChild(announcement);
-        setTimeout(() => announcement.remove(), 1000);
-      }
-
-      function toggleCart() {
-        if (cartItems === 0) {
-          alert("Votre panier est vide");
-        } else {
-          alert("Vous avez " + cartItems + " article(s) dans votre panier");
-        }
-      }
-
-      function handleSubmit(event) {
-        event.preventDefault();
-        const form = event.target;
-        
-        if (form.checkValidity()) {
-          alert("Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.");
-          form.reset();
-        }
-      }
-
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          const target = e.target;
-          
-          if (target.tagName === 'BUTTON' || target.classList.contains('btn-card') || target.classList.contains('btn-primary')) {
-            e.preventDefault();
-            target.click();
-          }
-          
-          if (target.tagName === 'A') {
-            e.preventDefault();
-            target.click();
-          }
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
