@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéShop - Boutique de cartes Pokémon rares</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo" role="banner">⚡ POKÉSHOP</div>
+      <div class="header-right">
+        <button
+          class="cart"
+          onclick="toggleCart()"
+          aria-label="Panier d'achat"
+          tabindex="0"
+        >
+          <div class="cart-icon" aria-hidden="true">🛒</div>
+          <div class="cart-count" id="cartCount" aria-live="polite">0</div>
+        </button>
+        <button
+          class="burger"
+          onclick="toggleMenu()"
+          aria-label="Menu de navigation"
+          aria-expanded="false"
+          aria-controls="menu"
+          tabindex="0"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+      </div>
+    </header>
+
+    <nav class="menu" id="menu" aria-label="Navigation principale">
+      <a href="#hero" onclick="scrollTo('hero')" tabindex="0">Accueil</a>
+      <a href="#catalog" onclick="scrollTo('catalog')" tabindex="0"
+        >Catalogue</a
+      >
+      <a href="#about" onclick="scrollTo('about')" tabindex="0">À propos</a>
+      <a href="#contact" onclick="scrollTo('contact')" tabindex="0">Contact</a>
+    </nav>
+
+    <main id="main-content">
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="hero-title" id="hero-title">
+            Découvrez les Cartes Légendaires
+          </h1>
+          <p class="hero-subtitle">
+            Collection exclusive de cartes Pokémon rares et authentifiées
+          </p>
+          <a
+            href="#catalog"
+            class="btn-primary"
+            onclick="scrollTo('catalog')"
+            tabindex="0"
+          >
+            Explorer le catalogue
+          </a>
+        </div>
+      </section>
+
+      <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+        <h2 class="section-title" id="catalog-title">
+          Notre Sélection Premium
+        </h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-image">
+              <img src="/img/darcaufeu.png" alt="" />
+              <span class="card-badge" aria-label="Rareté">Rare</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-name">Dracaufeu Holographique</h3>
+              <p class="card-details">Édition de base • 1ère édition</p>
+              <p class="card-price" aria-label="Prix">450€</p>
+              <button
+                class="btn-card"
+                onclick="addToCart('Dracaufeu Holographique', 450)"
+                aria-label="Ajouter Dracaufeu Holographique au panier pour 450 euros"
+                tabindex="0"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="/img/pika.png" alt="" />
+              <span class="card-badge" aria-label="Popularité">Populaire</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-name">Pikachu Illustrator</h3>
+              <p class="card-details">Promo exclusive • Mint</p>
+              <p class="card-price" aria-label="Prix">250€</p>
+              <button
+                class="btn-card"
+                onclick="addToCart('Pikachu Illustrator', 250)"
+                aria-label="Ajouter Pikachu Illustrator au panier pour 250 euros"
+                tabindex="0"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="/img/newtoo.png" alt="" />
+              <span class="card-badge" aria-label="Rareté">Rare</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-name">Mewtwo GX Rainbow</h3>
+              <p class="card-details">Soleil & Lune • PSA 10</p>
+              <p class="card-price" aria-label="Prix">380€</p>
+              <button
+                class="btn-card"
+                onclick="addToCart('Mewtwo GX Rainbow', 380)"
+                aria-label="Ajouter Mewtwo GX Rainbow au panier pour 380 euros"
+                tabindex="0"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img
+                src="/img/Tortank-holo-2-102-Set-de-Base-Fuji-Store-scaled.png"
+                alt=""
+              />
+            </div>
+            <div class="card-content">
+              <h3 class="card-name">Tortank Holo</h3>
+              <p class="card-details">Set de base • Near Mint</p>
+              <p class="card-price" aria-label="Prix">320€</p>
+              <button
+                class="btn-card"
+                onclick="addToCart('Tortank Holo', 320)"
+                aria-label="Ajouter Tortank Holo au panier pour 320 euros"
+                tabindex="0"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="/img/shopping.png" alt="" />
+            </div>
+            <div class="card-content">
+              <h3 class="card-name">Florizarre Shiny</h3>
+              <p class="card-details">Destinées Occultes • Holo</p>
+              <p class="card-price" aria-label="Prix">290€</p>
+              <button
+                class="btn-card"
+                onclick="addToCart('Florizarre Shiny', 290)"
+                aria-label="Ajouter Florizarre Shiny au panier pour 290 euros"
+                tabindex="0"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image">
+              <img src="/img/51XaCg-PdL.png" alt="" />
+              <span class="card-badge" aria-label="Rareté">Rare</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-name">Rayquaza VMAX</h3>
+              <p class="card-details">Évolutions Célestes • Secret</p>
+              <p class="card-price" aria-label="Prix">520€</p>
+              <button
+                class="btn-card"
+                onclick="addToCart('Rayquaza VMAX', 520)"
+                aria-label="Ajouter Rayquaza VMAX au panier pour 520 euros"
+                tabindex="0"
+              >
+                Ajouter au panier
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about-container">
+          <h2 class="section-title" id="about-title">Notre Histoire</h2>
+          <div class="about-content">
+            <p class="about-text">
+              Depuis 2010, PokéShop s'est imposé comme la référence européenne
+              dans la vente de cartes Pokémon authentiques et certifiées. Notre
+              équipe passionnée sélectionne méticuleusement chaque carte pour
+              garantir leur authenticité et leur état de conservation
+              exceptionnel.
+            </p>
+            <div class="about-features">
+              <div class="feature">
+                <div class="feature-icon" aria-hidden="true">✓</div>
+                <p class="feature-text">Certification PSA garantie</p>
+              </div>
+              <div class="feature">
+                <div class="feature-icon" aria-hidden="true">✓</div>
+                <p class="feature-text">Livraison sécurisée</p>
+              </div>
+              <div class="feature">
+                <div class="feature-icon" aria-hidden="true">✓</div>
+                <p class="feature-text">Retour sous 30 jours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-container">
+          <h2 class="section-title" id="contact-title">Contactez-nous</h2>
+          <form class="form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">
+                Votre nom<span class="required" aria-label="Obligatoire"
+                  >*</span
+                >
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jean Dupont"
+                required
+                aria-required="true"
+                aria-describedby="name-error"
+                tabindex="0"
+              />
+              <span id="name-error" class="error-message"
+                >Veuillez entrer votre nom</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                Votre email<span class="required" aria-label="Obligatoire"
+                  >*</span
+                >
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jean.dupont@exemple.fr"
+                required
+                aria-required="true"
+                aria-describedby="email-error"
+                tabindex="0"
+              />
+              <span id="email-error" class="error-message"
+                >Veuillez entrer une adresse email valide</span
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                Votre message<span class="required" aria-label="Obligatoire"
+                  >*</span
+                >
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Écrivez votre message ici..."
+                required
+                aria-required="true"
+                aria-describedby="message-error"
+                tabindex="0"
+              ></textarea>
+              <span id="message-error" class="error-message"
+                >Veuillez entrer votre message</span
+              >
+            </div>
+
+            <button type="submit" class="btn-primary" tabindex="0">
+              Envoyer
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">PokéShop</h3>
+          <p>Votre spécialiste des cartes rares</p>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Liens rapides</h3>
+          <a href="#catalog" onclick="scrollTo('catalog')" tabindex="0"
+            >Catalogue</a
+          >
+          <a href="#about" onclick="scrollTo('about')" tabindex="0">À propos</a>
+          <a href="#contact" onclick="scrollTo('contact')" tabindex="0"
+            >Contact</a
+          >
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title">Suivez-nous</h3>
+          <a href="#" aria-label="Suivez-nous sur Instagram" tabindex="0"
+            >Instagram</a
+          >
+          <a href="#" aria-label="Suivez-nous sur Facebook" tabindex="0"
+            >Facebook</a
+          >
+          <a href="#" aria-label="Suivez-nous sur Twitter" tabindex="0"
+            >Twitter</a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">© 2024 PokéShop - Tous droits réservés</div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
